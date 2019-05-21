@@ -15,17 +15,16 @@ var arrayOfLines = textArea.value.split("\n");
     result = result + "'" +  arrayOfLines[line] + "',"    
   }
 
-  document.getElementById("demo").innerHTML = result;
+  document.getElementById("demo").value = result;
   
 }
 </script>
 
 </HEAD>
 <BODY>
+  <input id="demo" value="result appears here"/>
 <table>  
-  <tr>
-    <p id="demo">Enter a list below, this will be converted to a comma delimited list of strings</p></td>
-  </tr>
+  
   <tr>    
     <td><button onclick="MakeSQLList()">Make SQL List</button></td>
    </tr>

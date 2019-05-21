@@ -1,0 +1,37 @@
+
+<HTML>
+<HEAD>
+
+
+
+<script>
+function MakeSQLList(){
+
+  //Take the contents of the text box and build a comma delimited list of strings
+ var textArea = document.getElementById("List");
+var arrayOfLines = textArea.value.split("\n"); 
+  result =""
+  for(var line in arrayOfLines){
+    result = result + "'" +  arrayOfLines[line] + "',"    
+  }
+
+  document.getElementById("demo").innerHTML = result;
+  
+}
+</script>
+
+</HEAD>
+<BODY>
+<table>  
+  <tr>
+    <p id="demo">Enter a list below, this will be converted to a comma delimited list of strings</p></td>
+  </tr>
+  <tr>    
+    <td><button onclick="MakeSQLList()">Make SQL List</button></td>
+   </tr>
+  <tr>
+    <td><textarea id='List' rows="80"></textarea></td>
+   </tr>
+</table>
+</BODY>
+</HTML>
